@@ -18,11 +18,6 @@ Secondary  #ff6b6b  | Shade  #f03e3e #e03131 #c92a2a | Tinit #fa5252  #ff8787 #f
 /* Font is Goodle Poppins */
 
 
-.container{
-    width: 80%;
-    margin: 0 auto;
-}
-
 /* UPPER ADD SECTION */
 .upper-add{
     display: flex;
@@ -39,10 +34,12 @@ Secondary  #ff6b6b  | Shade  #f03e3e #e03131 #c92a2a | Tinit #fa5252  #ff8787 #f
 .upper-add-singup{
     margin-left: 15px;
     cursor: pointer;
+    color: #fff5f5;
 }
 
 /* NAV SECTION */
 nav{
+    padding: 12px 24px;
     display: flex;
     flex-direction: column;
     align-items: center ;
@@ -50,23 +47,20 @@ nav{
 }
 
 nav .logo{
-    margin: 20px 0 5px 0;
-    padding-left: 5px;
+    margin: 16px 5px;
     font-size: 1.777rem;
     font-weight: 500;
     letter-spacing: -1px;
-    border-left: 4px solid #63e6be;
 }
 
 .menu{
     display: flex;
     flex-direction: row;
-    padding: 12px 24px;
+    padding: 0px 24px;
 }
 
 .menu li{
     margin-left: 10px;
-    padding-bottom: 5px;
     cursor: pointer;
     font-size: 1.222rem;
 }
@@ -76,8 +70,189 @@ nav .logo{
     transform: scale(1.1);
 }
 
+.menu span{
+    margin-right: 5px;
+}
+
 .active{
-    border-bottom: 3px solid #087f5b;
+    color: #087f5b;
+}
+
+
+/* Container */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr;
+    grid-template-areas:
+    "INTRO INTRO"
+    "SECTION ASIDE"
+    "FOOTER FOOTER";
+}
+
+.intro{
+    grid-area: INTRO;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.intro .welcome{
+    font-size: 0.9rem;
+}
+
+.secondary-color{
+    color: #ff6b6b;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.333rem;
+    font-weight: 500;
+    padding-top: 15px;
+}
+
+.typing1{
+    color:#087f5b;
+}
+
+.side-title{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.post-card{
+    margin-bottom: 20px;
+}
+
+.post-car-title{
+    font-size: 1.222rem;
+    letter-spacing: -1px;
+    color:#ff6b6b;
+    margin: 6px 0px;
+    cursor: pointer;
+}
+
+.author{
+    font-size: 0.8rem;
+    color: rgba(95, 93, 93, 0.59);
+}
+
+section{
+    grid-area: SECTION;
+    min-height: 55vh;
+}
+
+aside{
+    grid-area: ASIDE;
+    visibility: hidden ;
+    border-bottom: 2px solid #087f5b;
+    border-top: 2px solid #087f5b;
+    background-color: #f7f7f7;
+    padding: 0 10px;
+}
+
+/* FOOTER */
+footer{
+    grid-area: FOOTER;
+    border-top: 0.8px solid #12b886;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 0.5fr;
+    grid-template-areas:
+    "SOCIAL MAILING"
+    "RIGHTS RIGHTS";
+}
+
+.social{
+    grid-area: SOCIAL;
+    margin: 0 auto;
+}
+
+.mailing{
+    grid-area: MAILING;
+    margin: 0 auto;
+}
+
+.rights{
+    grid-area: RIGHTS;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: lightgray;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.333rem;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 60px;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #111;
+}
+
+.contact::after{
+    content: "get in touch";
+    display: block;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: -5px;
+    left: 50%;
+    padding: 0 5px;
+    font-size: 0.9rem;
+    background: white;
+    color: #ff6b6b;
+}
+
+.contact::before{
+    content: "";
+    width: 180px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background: #111;
+}
+
+.minicard{
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+.minicard i{
+    font-size: 25px;
+    color: #099268;
+    padding: 0 20px;
+}
+
+.minicard .info .head{
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 3px;
+}
+
+.minicard .info .sub{
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+
+.minicard a{
+    color: #099268;
 }
 
 @media only screen and (min-width: 768px) {
@@ -87,10 +262,13 @@ nav .logo{
         justify-content: space-between;
         align-items: center;
         padding: 0px 48px;
-        padding-bottom: 10px;
     }
 
     .menu li{
         margin-left: 30px;
+    }
+
+    aside{
+        visibility: visible;
     }
 }
