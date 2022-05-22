@@ -1,0 +1,39 @@
+/* Typography scales */
+/* 4.209rem/67.34px	    3.157rem/50.52px	2.369rem/37.90px	1.777rem/28.43px	1.333rem/21.33px	1rem/16.00px	0.75rem/12.00px	 0.563rem/9.00px	0.422rem/6.76px	 */
+
+/* Color pallet */
+/* Primary #20c997  | Shade #099268 #087f5b #12b886 | Tinit #c3fae8 #96f2d7 #63e6be #38d9a9 
+Grey #343a40  
+Secondary  #ff6b6b  | Shade  #f03e3e #e03131 #c92a2a | Tinit #fa5252  #ff8787 #ffa8a8 #ffc9c9 #ffe3e3 #fff5f5 */
+
+/* Font is Goodle Poppins */
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #343a40;
+    font-size: 16px;
+}
+
+h1{
+    font-size: 4.209rem;
+}
+
+h2{
+    font-size: 3.157rem;
+}
+
+h3{
+    font-size: 2.369rem;
+}
+
+h4{
+    font-size: 1.777rem;
+}
+
+div{
+    font-size: 1.222rem;
+}
+
+p{
+    font-size: 1.222rem;
+}
