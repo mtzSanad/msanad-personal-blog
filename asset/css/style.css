@@ -19,6 +19,7 @@ Secondary  #ff6b6b  | Shade  #f03e3e #e03131 #c92a2a | Tinit #fa5252  #ff8787 #f
 
 
 /* UPPER ADD SECTION */
+
 .upper-add{
     display: flex;
     justify-content: center;
@@ -74,6 +75,20 @@ nav .logo{
     margin-right: 5px;
 }
 
+.menu a{
+    text-decoration: none;
+}
+
+.menu a:link,
+.menu a{
+    color: #343a40;
+}
+
+.menu a:hover,
+.menu a:active{
+    color: #12b886;
+}
+
 .active{
     color: #087f5b;
 }
@@ -84,16 +99,17 @@ nav .logo{
     width: 80%;
     margin: 0 auto;
     display: grid;
+    grid-gap: 30px;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 4fr 2fr;
+    grid-template-rows: auto 4fr;
     grid-template-areas:
     "INTRO INTRO"
-    "SECTION ASIDE"
-    "FOOTER FOOTER";
+    "SECTION ASIDE";
 }
 
 .intro{
     grid-area: INTRO;
+    align-self: flex-start;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -119,6 +135,63 @@ nav .logo{
     color:#087f5b;
 }
 
+/* MAIN */
+section{
+    grid-area: SECTION;
+    min-height: 55vh;
+}
+
+.main-post{
+    box-shadow: 0px 0px 5px lightgray;
+    padding: 20px;
+    width: 90%;
+    height: 240px;
+    margin: 20px;
+    display: flex;
+    min-width: 400px;
+}
+
+.main-post img{
+    width: 100%;
+    max-width: 350px;
+    min-width: 50px;
+    height: auto;
+    object-fit: contain;
+    border-right: 1px solid lightgray;
+    padding-right: 20px;
+}
+
+.grouper{
+    margin-left: 20px;
+}
+
+.date{
+    color: #ff6b6b;
+    font-size: 0.8rem;
+}
+
+.main-post-title{
+    color: #099268;
+    font-weight: 500;
+    font-size: 1.333rem;
+    margin: 15px 0;
+}
+
+.details{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.details::after{
+    content: "continue reading";
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    color: #099268;
+    margin-top: 30px;
+}
+
+/* SIDE SECTION */
 .side-title{
     margin-bottom: 15px;
     margin-top: 10px;
@@ -141,11 +214,6 @@ nav .logo{
     color: rgba(95, 93, 93, 0.59);
 }
 
-section{
-    grid-area: SECTION;
-    min-height: 55vh;
-}
-
 aside{
     grid-area: ASIDE;
     visibility: hidden ;
@@ -153,12 +221,13 @@ aside{
     border-top: 2px solid #087f5b;
     background-color: #f7f7f7;
     padding: 0 10px;
+    align-self: flex-start;
 }
 
 /* FOOTER */
 footer{
-    grid-area: FOOTER;
     border-top: 0.8px solid #12b886;
+    margin-top: 100px;
 }
 
 .footer{
@@ -186,7 +255,7 @@ footer{
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    color: lightgray;
+    color: rgb(109, 108, 108);
 }
 
 .contact{
