@@ -156,6 +156,17 @@ nav .logo{
     font-size: 1.333rem;
     font-weight: 500;
     padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.quote{
+    line-height: 1.5;
+}
+
+figcaption{
+    font-size: 1rem;
+    color: #ff6b6b;
+    margin-bottom: 20px;
 }
 
 .typing1{
@@ -163,7 +174,7 @@ nav .logo{
 }
 
 /* MAIN */
-section{
+.app-section{
     grid-area: SECTION;
     min-height: 55vh;
 }
