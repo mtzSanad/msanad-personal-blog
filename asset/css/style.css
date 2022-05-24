@@ -18,10 +18,37 @@ Secondary  #ff6b6b  | Shade  #f03e3e #e03131 #c92a2a | Tinit #fa5252  #ff8787 #f
 /* Font is Goodle Poppins */
 
 
+html{
+    scroll-behavior: smooth;
+}
+
+/* SCROLL UP */
+.scroll-up{
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #087f5b;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 38px;
+    z-index: 999;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.scroll-up i{
+    font-size: 2rem;
+    margin-top: 4px ;
+    color: white;
+}
+
 /* UPPER ADD SECTION */
 
 .upper-add{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: #087f5b;
@@ -142,7 +169,7 @@ section{
 }
 
 .main-post{
-    box-shadow: 0px 0px 5px lightgray;
+    box-shadow: 0px 0px 5px #97cebf;
     padding: 20px;
     width: 90%;
     height: 240px;
@@ -324,6 +351,46 @@ footer{
     color: #099268;
 }
 
+/* POSTS */
+
+.posts-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.posts-card{
+    display: flex;
+    flex-direction: column;
+    margin: 35px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #12b886;
+}
+
+.posts-title{
+    font-size: 1.777rem;
+    font-weight: 700;
+    color: #087f5b;
+    margin-bottom: 30px;
+}
+
+.posts-img{
+    align-self: flex-start;
+    margin-bottom: 30px;
+    max-height: 20vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.posts-details{
+    line-height: 1.4;
+}
+
+.posts-adjust{
+    margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 768px) {
     nav{
         display: flex;
@@ -338,6 +405,14 @@ footer{
     }
 
     aside{
+        visibility: visible;
+    }
+
+    .upper-add{
+        display: flex;
+    }
+
+    .scroll-up{
         visibility: visible;
     }
 }
